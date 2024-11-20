@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+ 
+
+  <title>Maizpert</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="hero_bg_box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="{% url 'market' %}">
+              <span>
+                Maizpert
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item" style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item " style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'about' %}"> About</a>
+                </li>
+                <li class="nav-item active" style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'services' %}"> Services </a>
+                </li>
+                <li class="nav-item " style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'market' %}">Market </a>
+                </li>
+                <li class="nav-item" style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'sell' %}">Sell</a>
+                </li>
+
+                <li class="nav-item" style="font-size:23px;padding:10px;">
+                  <a class="nav-link" href="{% url 'cart' %}"><span>
+                  Cart
+                </span>
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i><sup style="background-color:teal;padding:8px;border-radius:50%;">{{cartItems}}</sup></a>
+                </li>
+
+
+              
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+ <!-- service section 1-->
+
+ <section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our services
+      </h2>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/mobile-shopping.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            
+            <h6>
+              Buy
+            </h6>
+           <p style="font-style: italic;">buy agro-commodities and equipments</p>
+            <a href="{% url 'market' %}">
+              Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/online-shopping.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              Sell
+            </h6>
+            <p style="font-style: italic;">Sell your crops,farming tools and others</p>
+            <a href="{% url 'sell' %}">
+              Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/main/storage.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+           
+            <h6>
+              Storage
+            </h6>
+            <p style="font-style: italic;">access our storage facilities</p>
+            <a href="{% url 'storage' %}">
+              Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/s1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              
+              <h6>
+                Distribution
+              </h6>
+             <p style="font-style: italic;">transport your agro-commodities</p>
+              <a href="seeds.html">
+                Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/virus1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                Detection
+              </h6>
+              <p style="font-style: italic;">Detect and predict your crops disease</p>
+              <a href="http://127.0.0.1:5000/">
+                Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/main/technical-support.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+             
+              <h6>
+                Support
+              </h6>
+              <p style="font-style: italic;">we offer 24/7 support services</p>
+              <a href="">
+                Visit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+
+
+    </div>
+ 
+</section>
+
+<!-- end service section -->
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="info_logo">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Mexpert
+              </span>
+            </a>
+            <p>
+              
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_links">
+            <h5>
+              Useful Link
+            </h5>
+            <ul>
+              <li>
+                <a href="">
+                  Storage
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Bulk purchase
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Sell
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Crops
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_info">
+            <h5>
+              Contact Us
+            </h5>
+          </div>
+          <div class="info_contact">
+            <a href="" class="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Q16 kontagora Road Kaduna
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +234 8146714240
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                magtechdihub@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_form ">
+            <h5>
+              Newsletter
+            </h5>
+            <form action="#">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Subscribe
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+
+
+   <!-- footer section -->
+   <footer class="container-fluid footer_section">
+    <p>
+      &copy; <span id="currentYear"></span> All Rights Reserved. Design by
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
+ 
